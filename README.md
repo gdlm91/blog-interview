@@ -26,8 +26,8 @@ You’re all set — happy coding!
 
 ## Tasks
 
-- **Core task** — Create a blog page that authenticates and fetches a list of articles from the mock API
-- **Scale-up 1** — Add responsive images to each blog post card
+- **Core task** — Create a blog page that authenticates and fetches a list of articles from the mock API (see [screenshot](./screenshots/core-task.png))
+- **Scale-up 1** — Add responsive images to each blog post card (see [screenshot](./screenshots/scale-up-1.png))
 - **Scale-up 2** — Add pagination (or "load more") functionality
 
 Refer to the `fetchClient` documentation below for details on how to use the mocked API client.
