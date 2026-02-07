@@ -28,7 +28,6 @@ You’re all set — happy coding!
 
 - **Core task** — Create a blog page that authenticates and fetches a list of articles from the mock API (see [screenshot](./screenshots/core-task.png))
 - **Scale-up 1** — Add responsive images to each blog post card (see [screenshot](./screenshots/scale-up-1.png))
-- **Scale-up 2** — Add pagination (or "load more") functionality
 
 Refer to the `fetchClient` documentation below for details on how to use the mocked API client.
 
@@ -65,10 +64,10 @@ The second argument is an optional configuration object.
 
 `fetchClient` returns a Promise that resolves to a response object with the following shape:
 
-| Field    | Type              | Description                      |
-| -------- | ----------------- | -------------------------------- |
-| `status` | `number`          | HTTP-like status code            |
-| `json`   | `() => Promise<T> | Resolves to the response payload |
+| Field    | Type               | Description                      |
+| -------- | ------------------ | -------------------------------- |
+| `status` | `number`           | HTTP-like status code            |
+| `json`   | `() => Promise<T>` | Resolves to the response payload |
 
 This mirrors the behavior of the native fetch API.
 
@@ -139,7 +138,7 @@ Each blog returned from `/blogs` has the following structure:
 | `id`          | `string` | Unique blog identifier        |
 | `title`       | `string` | Blog title                    |
 | `excerpt`     | `string` | Short description of the blog |
-| `author       | `string` | Author name                   |
+| `author`      | `string` | Author name                   |
 | `publishedAt` | `string` | Publication date              |
 | `imageUrl`    | `string` | URL to a square blog image    |
 
