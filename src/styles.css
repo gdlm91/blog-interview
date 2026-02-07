@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 24px;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.content {
+  padding: 24px;
+}

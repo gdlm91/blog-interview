@@ -18,7 +18,7 @@ Good luck!
 1. Make sure you have **git** and **Node.js 24 or higher** installed.
 2. Clone the repository: `git clone <repository-url>`
 3. Install the dependencies: `npm install`
-4. Start the development server: `npm start`
+4. Start the development server: `npm run dev`
 
 The app should open automatically at http://localhost:3000
 
