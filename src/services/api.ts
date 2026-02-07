@@ -24,6 +24,11 @@ type FetchResponse<T> = {
   json: () => Promise<T>;
 };
 
+export type FetchError = {
+  status: number;
+  message: string;
+};
+
 /* ------------------------------------------------------------------ */
 /* Mock data */
 /* ------------------------------------------------------------------ */
@@ -62,10 +67,10 @@ export function fetchClient<T>(
         const apiKey = (body as { apiKey?: string })?.apiKey;
 
         if (apiKey !== MOCK_API_KEY) {
-          resolve({
+          reject({
             status: 401,
-            json: async () => ({ message: "Invalid API key" }) as T,
-          });
+            message: "Invalid API key",
+          } as FetchError);
           return;
         }
 
@@ -81,10 +86,10 @@ export function fetchClient<T>(
         const authHeader = headers["Authorization"];
 
         if (authHeader !== `Bearer ${MOCK_TOKEN}`) {
-          resolve({
+          reject({
             status: 401,
-            json: async () => ({ message: "Unauthorized" }) as T,
-          });
+            message: "Unauthorized",
+          } as FetchError);
           return;
         }
 
